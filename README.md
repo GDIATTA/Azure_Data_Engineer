@@ -2,7 +2,7 @@
 
 #### Chapter1 : --------------------------- Azure Synapse Analytics -------------------------
 
-**What is Azure Synapse Analytics? <br>
+**What is Azure Synapse Analytics?** <br>
 **Azure Synapse** is an enterprise analytics service that accelerates time to insight across **data warehouses and big data systems**. **Azure Synapse** brings together the best of **SQL** technologies used in enterprise **data warehousing**, **Spark** technologies used for **big data, Data Explorer for log and time series analytics**, **Pipelines** for **data integration** and **ETL/ELT**, and deep integration with other Azure services such as **Power BI, CosmosDB, and AzureML**.<br>
 
 
