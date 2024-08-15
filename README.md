@@ -48,4 +48,5 @@ After your Azure Synapse workspace is created, you have two ways to open Synapse
 2. Go to the https://web.azuresynapse.net and sign in to your workspace.  <br>
 
 ![Capture d’écran 2024-08-14 013004](https://github.com/user-attachments/assets/c9cc6749-11db-4612-a399-8d37c97b848f)
+![Capture d’écran 2024-08-14 014108](https://github.com/user-attachments/assets/104a3222-8be7-4210-b721-ad864e2d98a2)
 
