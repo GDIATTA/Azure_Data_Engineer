@@ -57,10 +57,16 @@ In my storage, there is a **Data Lake Storage** created after my **Synapse works
 **-------------------- How to create an external table based on a **Data Lake** ? --------------------** <br>
 There a two ways to create an external table based on **Data Lake** :<br>
 1. Select **Data hub**, then choose **Workspace** and select **New table**, you will find a new window opening on the right :<br>
-> **In External table Details**, fill in the following fields :
->> For **External table name**, give any name.
->> For **Linked Service**, choose your **Data Lake Storage**.
->> For **Input file or folder**, select the file/folder to upload.
-> Complete the process and then select **Create**.
+> **In External table Details**, fill in the following fields : <br>
+>> For **External table name**, give any name. <br>
+>> For **Linked Service**, choose your **Data Lake Storage**. <br>
+>> For **Input file or folder**, select the file/folder to upload. <br>
+
+![Capture d’écran 2024-08-14 015251](https://github.com/user-attachments/assets/c32d0b4e-4b1f-49e9-b8e2-abe3661ffeb3)
+
+> Complete the process and then select **Create**. <br>
+
+![Capture d’écran 2024-08-14 015437](https://github.com/user-attachments/assets/ff7ef6fb-4e25-4e9a-8716-fcf0ce7accbe)
+
 
 
