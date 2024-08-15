@@ -79,7 +79,7 @@ There a two ways to create an external table based on **Data Lake** :<br>
 ![Capture d’écran 2024-08-14 021132](https://github.com/user-attachments/assets/9e5f87ff-758f-4247-843d-e3a4d1d0ec0e)
 
 2. Select **Data hub**, then choose **Linked** : <br>
-> click on the workspace to print the file to imported <br>
+> click on the workspace to print the file to import <br>
 > Select **Manage Hub** to create a **Pool Apache Spark** <br>
 >> Select **Apache Spark pools** <br>
 >> Select **New Pool Apache Spark** <br>
@@ -97,6 +97,14 @@ There a two ways to create an external table based on **Data Lake** :<br>
 ![Capture d’écran 2024-08-14 032952](https://github.com/user-attachments/assets/4158c49d-433f-46c5-bca1-a528f73944d8)
 ![Capture d’écran 2024-08-14 033027](https://github.com/user-attachments/assets/046b810b-f0d3-4971-bd82-91489b9a243e)
 ![Capture d’écran 2024-08-14 033136](https://github.com/user-attachments/assets/a99e51eb-9047-4605-8f57-24c88182bd5e)
+
+> Come back on the file to import, then click on to select the **Notebook associated**. <br>
+
+![Capture d’écran 2024-08-14 033222](https://github.com/user-attachments/assets/d72d72e2-619a-4d14-b34c-3622372e3c73)
+
+> Once opening notebook, you can process by editing a code Spark to create a **table** <br>
+
+![Capture d’écran 2024-08-14 161259](https://github.com/user-attachments/assets/3b304f36-65ea-4332-88e8-82184012897e)
 
 
 
