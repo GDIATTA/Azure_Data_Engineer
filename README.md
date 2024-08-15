@@ -106,6 +106,13 @@ There a two ways to create an external table based on **Data Lake** :<br>
 
 ![Capture d’écran 2024-08-14 161259](https://github.com/user-attachments/assets/3b304f36-65ea-4332-88e8-82184012897e)
 
+**Develop Hub** contains all SQL Script and Notebook created. <br>
+
+![Capture d’écran 2024-08-14 171559](https://github.com/user-attachments/assets/1fccbcca-1b62-40ad-85cf-8969679f4a76)
+
+**Monitor Hub** allows to follow the execution process of pipelines. <br>
+
+
 
 
 
