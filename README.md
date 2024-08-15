@@ -72,5 +72,8 @@ There a two ways to create an external table based on **Data Lake** :<br>
 ![Capture d’écran 2024-08-14 020241](https://github.com/user-attachments/assets/66a9661a-c935-46de-95cf-3200afaf4c78)
 ![Capture d’écran 2024-08-14 020349](https://github.com/user-attachments/assets/1821c55c-a406-47ab-ad6e-51e2d672c975)
 
+2. To check the data is imported well into this table, you need to create a SQL script. <br>
+
+![Capture d’écran 2024-08-14 020810](https://github.com/user-attachments/assets/ba566d5d-3635-4eed-ae68-852e80bb71fd)
 
 
