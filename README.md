@@ -95,6 +95,8 @@ There a two ways to create an external table based on **Data Lake** :<br>
 >>> Leave the remaining by default, then click on **View and Create** and choose **Create** <br>
 
 ![Capture d’écran 2024-08-14 032952](https://github.com/user-attachments/assets/4158c49d-433f-46c5-bca1-a528f73944d8)
+![Capture d’écran 2024-08-14 033027](https://github.com/user-attachments/assets/046b810b-f0d3-4971-bd82-91489b9a243e)
+![Capture d’écran 2024-08-14 033136](https://github.com/user-attachments/assets/a99e51eb-9047-4605-8f57-24c88182bd5e)
 
 
 
