@@ -50,3 +50,7 @@ After your Azure Synapse workspace is created, you have two ways to open Synapse
 ![Capture d’écran 2024-08-14 013004](https://github.com/user-attachments/assets/c9cc6749-11db-4612-a399-8d37c97b848f)
 ![Capture d’écran 2024-08-14 014108](https://github.com/user-attachments/assets/104a3222-8be7-4210-b721-ad864e2d98a2)
 
+In my storage, there is a **Data Lake Storage** created after my **Synapse workspace is ready**.
+
+![Capture d’écran 2024-08-14 014729](https://github.com/user-attachments/assets/a5a563cc-6601-4c25-824a-2c93b05c1699)
+
