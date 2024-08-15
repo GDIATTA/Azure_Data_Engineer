@@ -72,15 +72,15 @@ There a two ways to create an external table based on **Data Lake** :<br>
 ![Capture d’écran 2024-08-14 020241](https://github.com/user-attachments/assets/66a9661a-c935-46de-95cf-3200afaf4c78)
 ![Capture d’écran 2024-08-14 020349](https://github.com/user-attachments/assets/1821c55c-a406-47ab-ad6e-51e2d672c975)
 
-2. To check the data is imported well into this table, you need to create a SQL script. <br>
+2. To check the data has been successfully imported into this table, you need to create a SQL script. <br>
 
 ![Capture d’écran 2024-08-14 020810](https://github.com/user-attachments/assets/ba566d5d-3635-4eed-ae68-852e80bb71fd)
 ![Capture d’écran 2024-08-14 020856](https://github.com/user-attachments/assets/95b3a6ef-d68e-4490-8bcf-dd96f21f9fa7)
 ![Capture d’écran 2024-08-14 021132](https://github.com/user-attachments/assets/9e5f87ff-758f-4247-843d-e3a4d1d0ec0e)
 
 2. Select **Data hub**, then choose **Linked** : <br>
-> click on the workspace to print the file to import <br>
-> Select **Manage Hub** to create a **Pool Apache Spark** <br>
+> click on the workspace to display the file to be imported <br>
+> Select **Manage Hub** to create an **Apache Spark Pool** <br>
 >> Select **Apache Spark pools** <br>
 >> Select **New Pool Apache Spark** <br>
 
@@ -88,29 +88,29 @@ There a two ways to create an external table based on **Data Lake** :<br>
 
 >> For **New pool Apache Spark**, fill in the following fileds: <br>
 
->>>  In Details of Apache Spark pool, give any name for name of Apache Spark pool, then choose size of noeud and choose 3 like number of noeud. <br>
+>>> In Details of Apache Spark pool, enter a name of your choice for the **Apache Spark pool**. Then select the noeud size and set the number of noeuds to 3. <br>
 
 ![Capture d’écran 2024-08-14 032822](https://github.com/user-attachments/assets/17a6fc06-5e0a-46ab-bc51-a8337ad64d8e)
 
->>> Leave the remaining by default, then click on **View and Create** and choose **Create** <br>
+>>> Leave the remaining settings as default, then click on **View and Create** and choose **Create** <br>
 
 ![Capture d’écran 2024-08-14 032952](https://github.com/user-attachments/assets/4158c49d-433f-46c5-bca1-a528f73944d8)
 ![Capture d’écran 2024-08-14 033027](https://github.com/user-attachments/assets/046b810b-f0d3-4971-bd82-91489b9a243e)
 ![Capture d’écran 2024-08-14 033136](https://github.com/user-attachments/assets/a99e51eb-9047-4605-8f57-24c88182bd5e)
 
-> Come back on the file to import, then click on to select the **Notebook associated**. <br>
+> Return on the file to be imported, then click to select the **Associated Notebook**. <br>
 
 ![Capture d’écran 2024-08-14 033222](https://github.com/user-attachments/assets/d72d72e2-619a-4d14-b34c-3622372e3c73)
 
-> Once opening notebook, you can process by editing a code Spark to create a **table** <br>
+> After opening the notebook, you can proceed by editing a Spark code to create a **table** <br>
 
 ![Capture d’écran 2024-08-14 161259](https://github.com/user-attachments/assets/3b304f36-65ea-4332-88e8-82184012897e)
 
-**Develop Hub** contains all SQL Script and Notebook created. <br>
+**Develop Hub** contains all SQL Script and Notebooks that have been created. <br>
 
 ![Capture d’écran 2024-08-14 171559](https://github.com/user-attachments/assets/1fccbcca-1b62-40ad-85cf-8969679f4a76)
 
-**Monitor Hub** allows to follow the execution process of pipelines. <br>
+**Monitor Hub** enables you to track the execution process of pipelines. <br>
 
 
 
