@@ -18,3 +18,5 @@ Start the process <br>
 > 2. In the search results, under Services, select Azure Synapse Analytics. <br>
 > 3. Select Create to create a workspace. <br>
 
+![Capture d’écran 2024-08-14 010950](https://github.com/user-attachments/assets/0c6fc256-c205-45eb-aac5-8ee7e9374df8)
+
