@@ -78,4 +78,24 @@ There a two ways to create an external table based on **Data Lake** :<br>
 ![Capture d’écran 2024-08-14 020856](https://github.com/user-attachments/assets/95b3a6ef-d68e-4490-8bcf-dd96f21f9fa7)
 ![Capture d’écran 2024-08-14 021132](https://github.com/user-attachments/assets/9e5f87ff-758f-4247-843d-e3a4d1d0ec0e)
 
+2. Select **Data hub**, then choose **Linked** : <br>
+> click on the workspace to print the file to imported <br>
+> Select **Manage Hub** to create a **Pool Apache Spark** <br>
+>> Select **Apache Spark pools** <br>
+>> Select **New Pool Apache Spark** <br>
+
+![Capture d’écran 2024-08-14 032639](https://github.com/user-attachments/assets/4c209bc3-a781-4350-ba79-d9c1c0cf4c35)
+
+>> For **New pool Apache Spark**, fill in the following fileds: <br>
+
+>>>  In Details of Apache Spark pool, give any name for name of Apache Spark pool, then choose size of noeud and choose 3 like number of noeud. <br>
+
+![Capture d’écran 2024-08-14 032822](https://github.com/user-attachments/assets/17a6fc06-5e0a-46ab-bc51-a8337ad64d8e)
+
+>>> Leave the remaining by default, then click on **View and Create** and choose **Create** <br>
+
+![Capture d’écran 2024-08-14 032952](https://github.com/user-attachments/assets/4158c49d-433f-46c5-bca1-a528f73944d8)
+
+
+
 
