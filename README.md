@@ -473,7 +473,7 @@ Big data requires a service that can orchestrate and operationalize processes to
 > **Customizable Data Flows**: Azure Data Factory allows you to create customizable data flows. This feature allows you to add custom actions or steps for data processing. <br>
 > **Integrated Security**: Azure Data Factory offers integrated security features such as Entra ID integration and role-based access control to control access to dataflows. This feature increases security in data processing and protects your data. <br>
 
-**----- How does it work? ----:** <br>
+**----- 3. How does it work? ----:** <br>
 Data Factory contains a series of interconnected systems that provide a complete end-to-end platform for data engineers.<br>
 > **Connect and collect** : <br>
 Enterprises have data of various types that are located in disparate sources on-premises, in the cloud, structured, unstructured, and semi-structured, all arriving at different intervals and speeds.<br>
@@ -484,7 +484,7 @@ Data Factory offers full support for CI/CD of your data pipelines using Azure De
 > **Monitor**: <br>
 After you have successfully built and deployed your data integration pipeline, providing business value from refined data, monitor the scheduled activities and pipelines for success and failure rates. Azure Data Factory has built-in support for pipeline monitoring via Azure Monitor, API, PowerShell, Azure Monitor logs, and health panels on the Azure portal.<br>
 
-**----- Get started with Azure Data Factory -----:** <br>
+**----- 4. Get started with Azure Data Factory -----:** <br>
 In tutorial, we will use the Copy activity in a data factory to copy an Azure blob named moviesDB2.csv from an input folder on an Azure Blob Storage to an output folder. <br>
 
 1. Go to all services and select Data Factory. <br>
