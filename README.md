@@ -112,6 +112,64 @@ There a two ways to create an external table based on **Data Lake** :<br>
 
 **Monitor Hub** enables you to track the execution process of pipelines. <br>
 
+#### Chapter2 : -------------------------------- Pipeline and data flow ---------------------------------:
+In Azure Synapse Analytics, we can build a pipeline to ingest, transform, model, and analyze your data. <br>
+In this tutorial, we will load data from Azure SQL Database into Azure Synapse Analytics. <br>
+
+**------------------------ 1. Create a single database -----------------------**
+This tutorial allow to create a single database in the serverless compute tier. <br>
+Get Started :<br>
+To create a single database in the Azure portal : <br>
+1. Browser to SQL Databases page <br>
+2. Choose **create SLQ Database** <br>
+![Capture d’écran 2024-08-16 023522](https://github.com/user-attachments/assets/27ed0d14-8453-44d1-be10-260f99c11434)
+
+3. On the Basics tab of the Create SQL Database form, under Project details, select the desired **Azure Subscription**. <br>
+4. For Resource group, select Create new, enter **GroupResource2**, and select OK. <br>
+5. For Database name, enter **mySampleDatabase** <br>
+
+![Capture d’écran 2024-08-16 025301](https://github.com/user-attachments/assets/b0a0ff95-cd51-496b-8f44-e08d322d1fda)
+
+For Server, select Create new, and fill out the New server form with the following values: <br>
+6. Server name: Enter mysqlserver, and add some characters for uniqueness. We can't provide an exact server name to use because server names must be globally unique for all servers in Azure, not just unique within a subscription. So enter something like **mysqlserver1234567**, and the portal lets you know if it's available or not. <br>
+**Location**: Select a location from the dropdown list. <br>
+**Authentication method**: Select **Use SQL authentication**. <br>
+**Server admin logi**n: Enter **azureuser**. <br>
+**Password**: Enter a password that meets requirements, and enter it again in the Confirm password field. <br>
+Select **Ok**
+
+![Capture d’écran 2024-08-16 024556](https://github.com/user-attachments/assets/7c5bdfd3-d2a5-45d2-9059-2367ce69508a)
+
+7. Under Compute + storage, select Configure database. <br>
+
+![Capture d’écran 2024-08-16 025326](https://github.com/user-attachments/assets/14b7653c-6497-4f9c-b2d5-103e9b1c39ec)
+![Capture d’écran 2024-08-16 024936](https://github.com/user-attachments/assets/9c92d009-e279-4178-a226-f724e99e49c5)
+
+8. On the Networking tab, for Connectivity method, select Public endpoint. <br>
+9. For Firewall rules, set Add current client IP address to Yes. Leave Allow Azure services and resources to access this server set to No. <br>
+
+![Capture d’écran 2024-08-16 025607](https://github.com/user-attachments/assets/8d9f5c33-c468-4c33-be1a-b115d4cffcb8)
+
+10. Under Connection policy, choose the Default connection policy, and leave the Minimum TLS version at the default of TLS 1.2.<br>
+
+![Capture d’écran 2024-08-16 025705](https://github.com/user-attachments/assets/4d179363-f6af-4eee-8fd1-092bcbbbbd72)
+
+11. On the Security page, you can choose to start a free trial of Microsoft Defender for SQL, as well as configure Ledger, Managed identities and Transparent data encryption (TDE) if you desire. Select Next: Additional settings at the bottom of the page.<br>
+12. On the Additional settings tab, in the Data source section, for Use existing data, select Sample. This creates an AdventureWorksLT sample database so there's some tables and data to query and experiment with, as opposed to an empty blank database. You can also configure database collation and a maintenance window.<br>
+13. On the Review + create page, after reviewing, select Create.<br>
+
+![Capture d’écran 2024-08-16 030141](https://github.com/user-attachments/assets/951dc48c-d156-4c07-a49c-c7be34543ac0)
+![Capture d’écran 2024-08-16 030242](https://github.com/user-attachments/assets/1735c281-38fc-4dd7-b5d0-f2c6b459e983)
+![Capture d’écran 2024-08-16 030533](https://github.com/user-attachments/assets/c3235c52-5171-4f7c-92b2-1673a76b5498)
+
+
+
+
+
+
+
+
+
 
 
 
