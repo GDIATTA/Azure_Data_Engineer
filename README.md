@@ -243,7 +243,6 @@ Note that there are specific limitations for the names that dedicated SQL pools 
 If you want to restore your dedicated SQL pool from a restore point, select Restore point. <br>
 
 ![Capture d’écran 2024-08-16 150509](https://github.com/user-attachments/assets/82463e19-d60b-4889-80a8-ac5750c4ae25)
-![Capture d’écran 2024-08-16 153942](https://github.com/user-attachments/assets/69b8e47a-ee84-4be8-bbd7-04fa935ab06c)
 ![Capture d’écran 2024-08-16 153942](https://github.com/user-attachments/assets/1cc696cd-0cc6-4a02-bed3-b51ba7482d49)
 ![Capture d’écran 2024-08-16 154104](https://github.com/user-attachments/assets/b15e95fe-994f-471d-8aa1-38e20750bbf1)
 ![Capture d’écran 2024-08-16 154210](https://github.com/user-attachments/assets/b3a68752-d42a-4968-9da3-f08f46f053b7)
