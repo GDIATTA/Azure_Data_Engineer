@@ -182,6 +182,55 @@ Select **Ok**
 ![Capture d’écran 2024-08-16 031450](https://github.com/user-attachments/assets/3860d77f-a1d3-4357-990e-e085acb736db)
 
 
+**---------- 3. Use Visual Studio Code to connect and query Azure SQL Database or Azure SQL Managed Instance ----------:** <br>
+**------ 3.1 Configure Visual Studio Code -------** <br>
+In Windows <br>
+Load the **mssql** extension by following these steps: <br>
+1.Open Visual Studio Code. <br>
+2.Open the Extensions pane (or Ctrl + Shift + X). <br>
+3.Search for sql and then install the **SQL Server (mssql) extension**. <br>
+
+![Capture d’écran 2024-08-16 032626](https://github.com/user-attachments/assets/a0e18c63-8da0-4766-9042-d369d22370fa)
+
+**---- 3.2 Get server connection information ----**
+Get the connection information you need to connect to Azure SQL Database. You need the fully qualified server name or host name, database name, and login information for the upcoming procedures. <br> 
+1. Sign in to the Azure portal. <br>
+2. Navigate to the SQL databases or SQL Managed Instances page. <br>
+3. On the Overview page, review the fully qualified server name next to Server name for SQL Database or the fully qualified server name next to Host for a SQL Managed Instance. To copy the server name or host name, hover over it and select the Copy icon. <br>
+**mysqlserver1234567.database.windows.net** <br>
+
+![Capture d’écran 2024-08-16 033111](https://github.com/user-attachments/assets/1ce1efc7-a099-4a3d-a09b-0cf2d712e823)
+
+**---- 3.3 Set language mode to SQL -----** <br>
+In Visual Studio Code, set the language mode to SQL to enable mssql commands and T-SQL IntelliSense. <br>
+1. Open a new Visual Studio Code window. <br>
+2. Press **Ctrl + N**. A new plain text file opens. <br>
+3. Select Plain Text in the status bar's lower right-hand corner. <br>
+4. In the Select **language** mode dropdown list that opens, select **SQL**. <br>
+
+**---- 3.4 Connect to your database ----**: <br>
+Use Visual Studio Code to establish a connection to your server. <br>
+ **Important:** <br>
+Before continuing, make sure that you have your server and sign-in information ready. Once you begin entering the connection profile information, if you change your focus from Visual Studio Code, you have to restart creating the profile. <br>
+
+1. In Visual Studio Code, press **Ctrl + Shift + P** (or F1) to open the **Command Palette**. <br>
+2. Type connect and then choose **MS SQL:Connect**. <br>
+3. Select + **Create Connection Profile**. <br>
+4. Follow the prompts to specify the new profile's connection properties. After specifying each value, press Enter to continue. <br>
+
+![Capture d’écran 2024-08-16 141132](https://github.com/user-attachments/assets/2c0cd321-db60-4608-a323-a20f1896d137)
+![Capture d’écran 2024-08-16 141442](https://github.com/user-attachments/assets/3721eb50-24b8-4755-ac8c-d0fff124828d)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
