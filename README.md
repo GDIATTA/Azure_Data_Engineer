@@ -116,7 +116,7 @@ There a two ways to create an external table based on **Data Lake** :<br>
 In Azure Synapse Analytics, we can build a pipeline to ingest, transform, model, and analyze your data. <br>
 In this tutorial, we will load data from Azure SQL Database into Azure Synapse Analytics. <br>
 
-**------------------------ 1. Create a single database -----------------------**
+**------------------------ 1. Create a single database -----------------------** <br>
 This tutorial allow to create a single database in the serverless compute tier. <br>
 Get Started :<br>
 To create a single database in the Azure portal : <br>
@@ -162,8 +162,7 @@ Select **Ok**
 ![Capture d’écran 2024-08-16 030242](https://github.com/user-attachments/assets/1735c281-38fc-4dd7-b5d0-f2c6b459e983)
 ![Capture d’écran 2024-08-16 030533](https://github.com/user-attachments/assets/c3235c52-5171-4f7c-92b2-1673a76b5498)
 
-**-------------------------- 1.2. Query the database ------------------------:**
-
+**-------------------------- 1.2. Query the database ------------------------:** <br>
 1. In the portal, search for and select SQL databases, and then select your database from the list.<br>
 2. On the page for your database, select Query editor (preview) in the left menu.<br>
 
@@ -192,7 +191,7 @@ Load the **mssql** extension by following these steps: <br>
 
 ![Capture d’écran 2024-08-16 032626](https://github.com/user-attachments/assets/a0e18c63-8da0-4766-9042-d369d22370fa)
 
-**---- 1.3.2 Get server connection information ----**
+**---- 1.3.2 Get server connection information ----** <br>
 Get the connection information you need to connect to Azure SQL Database. You need the fully qualified server name or host name, database name, and login information for the upcoming procedures. <br> 
 1. Sign in to the Azure portal. <br>
 2. Navigate to the SQL databases or SQL Managed Instances page. <br>
@@ -250,7 +249,7 @@ If you want to restore your dedicated SQL pool from a restore point, select Rest
 ![Capture d’écran 2024-08-16 154104](https://github.com/user-attachments/assets/b15e95fe-994f-471d-8aa1-38e20750bbf1)
 ![Capture d’écran 2024-08-16 154210](https://github.com/user-attachments/assets/b3a68752-d42a-4968-9da3-f08f46f053b7)
 
-**----- 3. Navigate to the Synapse Studio ------:**
+**----- 3. Navigate to the Synapse Studio ------:** <br>
 After your Synapse workspace is created, you have two ways to open Synapse Studio:<br>
 + Open your Synapse workspace in the Azure portal. Select Open on the Open Synapse Studio card under Getting started. <br>
 + Open Azure Synapse Analytics and sign in to your Workspace. <br>
@@ -345,6 +344,115 @@ In this section, you manually trigger the pipeline published in the previous ste
 6. Verify your data is correctly written in the dedicated SQL pool. <br>
 
 ![Capture d’écran 2024-08-16 163439](https://github.com/user-attachments/assets/04a2c19f-7753-4636-85d0-36efab2355c6)
+
+**-------- 4. Create a pipeline with a Data Flow activity -----:** <br>
+A pipeline contains the logical flow for an execution of a set of activities. In this section, you'll create a pipeline that contains a Data Flow activity. <br>
+1. Go to the **Integrate tab**. Select on the plus icon next to the pipelines header and select Pipeline. <br>
+2. In the Properties settings page of the pipeline, enter **TransformMovies** for Name. <br>
+3. Under **Move and Transform** in the Activities pane, drag Data flow onto the pipeline canvas. <br>
+4. In the Adding data flow page pop-up, select Create new data flow -> Data flow. Click OK when done. <br>
+5. Name your data flow TransformMovies on the Properties page. <br>
+
+![Capture d’écran 2024-08-16 170931](https://github.com/user-attachments/assets/3ab02952-5ee7-497d-bc62-c4a93e700a43)
+
+**---- 4.1 Build transformation logic in the data flow canvas ----:** <br>
+Once you create your Data Flow, you'll be automatically sent to the data flow canvas. In this step, you'll build a data flow that takes the MoviesDB.csv in ADLS storage and aggregates the average rating of comedies from 1910 to 2000. You'll then write this file back to the ADLS storage. <br>
+1. Above the data flow canvas, slide the Data flow **debug slider on**. Debug mode allows for interactive testing of transformation logic against a live Spark cluster. Data Flow clusters take 5-7 minutes to warm up and users are recommended to turn on debug first if they plan to do Data Flow development. <br>
+2. In the data flow canvas, add a source by clicking on the **Add Source box**. <br>
+
+![Capture d’écran 2024-08-16 172004](https://github.com/user-attachments/assets/6abae239-e577-48f0-b5cb-4c8a62957806)
+
+3. Name your source **MoviesDB**. Click on **New** to create a new source dataset. <br>
+4. Choose **Azure Data Lake Storage Gen2**. Click **Continue**. <br>
+
+![Capture d’écran 2024-08-16 172408](https://github.com/user-attachments/assets/33a3d142-e320-41aa-adae-fb43fbcce61b)
+
+5. Choose **DelimitedText**. Click **Continue**. <br>
+
+![Capture d’écran 2024-08-16 172453](https://github.com/user-attachments/assets/5b8a3a64-edb8-4ebd-b957-04f3ab25e763)
+
+6. Name your dataset **MoviesDB**. In the linked service dropdown, choose **New**. <br>
+7. In the linked service creation screen, name your ADLS Gen2 linked service **AzureDataLakeStorage1** and specify your authentication method. Then enter your connection credentials. In this tutorial, we're using Account key to connect to our storage account. You can click Test connection to verify your credentials were entered correctly. Click Create when finished. <br>
+8. Once you're back at the dataset creation screen, under the **File path field**, enter where your file is located. In this tutorial, the file **MoviesDB.csv** is located in container **filegauss1**. As the file has headers, check First row as header. Select From **connection/store** to import the header schema directly from the file in storage. Click **OK** when done. <br>
+
+![Capture d’écran 2024-08-16 172844](https://github.com/user-attachments/assets/87b5ae4e-99e2-4ea8-ac38-b9ba7014074a)
+
+9. if your debug cluster has started, go to the Data Preview tab of the source transformation and click Refresh to get a snapshot of the data. You can use data preview to verify your transformation is configured correctly. <br>
+
+![Capture d’écran 2024-08-16 173002](https://github.com/user-attachments/assets/9dc699b2-d571-41cc-b2e8-e1bb70aee9e4)
+![Capture d’écran 2024-08-16 173121](https://github.com/user-attachments/assets/c40153d7-47ae-48c2-92eb-d73dcc7f55a9)
+
+10. Next to your source node on the data flow canvas, click on the **plus icon** to add a new transformation. The first transformation you're adding is a **Filter**. <br>
+
+![Capture d’écran 2024-08-16 173333](https://github.com/user-attachments/assets/2289c268-3d81-47f4-a0c3-0876a6fffa50)
+
+11. Name your filter transformation **filter1**. Click on the expression box next to Filter on to open the expression builder. Here you'll specify your filtering condition. <br>
+12. The data flow expression builder lets you interactively build expressions to use in various transformations. Expressions can include built-in functions, columns from the input schema, and user-defined parameters. <br>
+
+In this tutorial, we want to filter movies of genre comedy that came out between the years 1910 and 2000. As year is currently a string, you need to convert it to an integer using the toInteger() function. Use the greater than or equals to (>=) and less than or equals to (<=) operators to compare against literal year values 1910 and 200-. Union these expressions together with the && (and) operator. The expression comes out as: <br>
+**toInteger(year) >= 1910 && toInteger(year) <= 2000** <br>
+To find which movies are comedies, you can use the rlike() function to find pattern 'Comedy' in the column genres. Union the rlike expression with the year comparison to get: <br>
+**toInteger(year) >= 1910 && toInteger(year) <= 2000 && rlike(genres, 'Comedy')** <br>
+If you've a debug cluster active, you can verify your logic by clicking Refresh to see expression output compared to the inputs used. There's more than one right answer on how you can accomplish this logic using the data flow expression language. <br>
+Click Save and Finish once you're done with your expression. <br>
+
+![Capture d’écran 2024-08-16 174325](https://github.com/user-attachments/assets/e76f37c6-0fcc-46b2-ad5c-a2824275fe7b)
+
+13. Fetch a **Data Preview** to verify the filter is working correctly. <br>
+
+![Capture d’écran 2024-08-16 174352](https://github.com/user-attachments/assets/a2dff10a-95fe-4adc-b2ee-0efd50813f3d)
+
+14. The next transformation you'll add is an **Aggregate transformation** under Schema modifier. <br>
+
+![Capture d’écran 2024-08-16 174601](https://github.com/user-attachments/assets/08f6e152-fd76-4569-bab7-6786a90b3f1b)
+
+15. Name your aggregate transformation **Aggregate1**. In the Group by tab, select **year** from the dropdown to group the aggregations by the year the movie came out. <br>
+
+![Capture d’écran 2024-08-16 174823](https://github.com/user-attachments/assets/09c7ad84-2af2-44d8-b92c-6190699c453a)
+
+16. Go to the **Aggregates tab**. In the left text box, name the aggregate column **AverageComedyRating**. Click on the **right expression box** to enter the **aggregate expression** via the expression builder. <br>
+17. To get the average of column Rating, use the avg() aggregate function. As Rating is a string and avg() takes in a numerical input, we must convert the value to a number via the toInteger() function. This expression looks like: <br>
+**avg(toInteger(Rating))**. <br>
+
+![Capture d’écran 2024-08-16 175130](https://github.com/user-attachments/assets/59f901e0-27f4-426b-8294-5a899df0e854)
+
+18. Go to the **Data Preview tab** to view the transformation output. Notice only two columns are there, year and AverageComedyRating. <br>
+
+![Capture d’écran 2024-08-16 175230](https://github.com/user-attachments/assets/47b2141c-160b-4ad8-8bd8-b0bf9ddc5b32)
+
+19. Next, you want to **add a Sink transformation** under Destination. <br>
+
+![Capture d’écran 2024-08-16 175354](https://github.com/user-attachments/assets/8f431856-37ee-4bac-b630-cf920454d6ee)
+
+20. Name your sink **sink1**. Click **New** to create your sink dataset. <br>
+21. Choose **Azure Data Lake Storage Gen2**. Click **Continue**. <br>
+
+![Capture d’écran 2024-08-16 175508](https://github.com/user-attachments/assets/df88dc91-af3c-45c5-b434-2de8291eebef)
+
+22. Choose **DelimitedText**. Click **Continue**. <br>
+
+![Capture d’écran 2024-08-16 175545](https://github.com/user-attachments/assets/d1c8adef-cc17-4b96-93c0-85e79b291612)
+
+23. Name your sink dataset **MoviesSink**. For linked service, choose the **AzureDataLakeStorage1** linked service you created in step 7. Enter an output folder to write your data to. In this tutorial, we're writing to folder 'output' in container **folder1**. The folder doesn't need to exist beforehand and can be dynamically created. Set First row as header as true and select None for Import schema. Click **OK** when done. <br>
+
+![Capture d’écran 2024-08-16 175802](https://github.com/user-attachments/assets/84746b4c-9848-43ea-b745-abf63de8b2b4)
+![Capture d’écran 2024-08-16 180223](https://github.com/user-attachments/assets/fc658dcd-59a4-4e85-a518-5161d471d71c)
+
+Now you've finished building your data flow. You're ready to run it in your pipeline. <br>
+
+**------- Running and monitoring the Data Flow --------:** <br>
+You can debug a pipeline before you publish it. In this step, you're going to trigger a debug run of the data flow pipeline. While data preview doesn't write data, a debug run will write data to your sink destination. <br>
+
+![Capture d’écran 2024-08-17 010448](https://github.com/user-attachments/assets/7851bbe5-192a-4aaa-a805-5a1276ca4909)
+
+1. Go to the pipeline canvas. Click Debug to trigger a debug run. <br>
+2. Pipeline debug of Data Flow activities uses the active debug cluster but still take at least a minute to initialize. You can track the progress via the Output tab. Once the run is successful, click on the eyeglasses icon to open the monitoring pane. <br>
+
+![Capture d’écran 2024-08-17 010719](https://github.com/user-attachments/assets/b5425d7d-f1e1-42fd-b496-4658811ce6ad)
+
+3. In the monitoring pane, you can see the number of rows and time spent in each transformation step. <br>
+
+![Capture d’écran 2024-08-17 010810](https://github.com/user-attachments/assets/fac82aca-859f-4729-a476-1d10568733a6)
 
 
 
