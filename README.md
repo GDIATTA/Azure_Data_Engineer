@@ -162,7 +162,7 @@ Select **Ok**
 ![Capture d’écran 2024-08-16 030242](https://github.com/user-attachments/assets/1735c281-38fc-4dd7-b5d0-f2c6b459e983)
 ![Capture d’écran 2024-08-16 030533](https://github.com/user-attachments/assets/c3235c52-5171-4f7c-92b2-1673a76b5498)
 
-**-------------------------- 2. Query the database ------------------------:**
+**-------------------------- 1.2. Query the database ------------------------:**
 
 1. In the portal, search for and select SQL databases, and then select your database from the list.<br>
 2. On the page for your database, select Query editor (preview) in the left menu.<br>
@@ -182,8 +182,8 @@ Select **Ok**
 ![Capture d’écran 2024-08-16 031450](https://github.com/user-attachments/assets/3860d77f-a1d3-4357-990e-e085acb736db)
 
 
-**---------- 3. Use Visual Studio Code to connect and query Azure SQL Database or Azure SQL Managed Instance ----------:** <br>
-**------ 3.1 Configure Visual Studio Code -------** <br>
+**---------- 1.3. Use Visual Studio Code to connect and query Azure SQL Database or Azure SQL Managed Instance ----------:** <br>
+**------ 1.3.1 Configure Visual Studio Code -------** <br>
 In Windows <br>
 Load the **mssql** extension by following these steps: <br>
 1.Open Visual Studio Code. <br>
@@ -192,7 +192,7 @@ Load the **mssql** extension by following these steps: <br>
 
 ![Capture d’écran 2024-08-16 032626](https://github.com/user-attachments/assets/a0e18c63-8da0-4766-9042-d369d22370fa)
 
-**---- 3.2 Get server connection information ----**
+**---- 1.3.2 Get server connection information ----**
 Get the connection information you need to connect to Azure SQL Database. You need the fully qualified server name or host name, database name, and login information for the upcoming procedures. <br> 
 1. Sign in to the Azure portal. <br>
 2. Navigate to the SQL databases or SQL Managed Instances page. <br>
@@ -201,14 +201,14 @@ Get the connection information you need to connect to Azure SQL Database. You ne
 
 ![Capture d’écran 2024-08-16 033111](https://github.com/user-attachments/assets/1ce1efc7-a099-4a3d-a09b-0cf2d712e823)
 
-**---- 3.3 Set language mode to SQL -----** <br>
+**---- 1.3.3 Set language mode to SQL -----** <br>
 In Visual Studio Code, set the language mode to SQL to enable mssql commands and T-SQL IntelliSense. <br>
 1. Open a new Visual Studio Code window. <br>
 2. Press **Ctrl + N**. A new plain text file opens. <br>
 3. Select Plain Text in the status bar's lower right-hand corner. <br>
 4. In the Select **language** mode dropdown list that opens, select **SQL**. <br>
 
-**---- 3.4 Connect to your database ----**: <br>
+**---- 1.3.4 Connect to your database ----**: <br>
 Use Visual Studio Code to establish a connection to your server. <br>
  **Important:** <br>
 Before continuing, make sure that you have your server and sign-in information ready. Once you begin entering the connection profile information, if you change your focus from Visual Studio Code, you have to restart creating the profile. <br>
@@ -220,6 +220,35 @@ Before continuing, make sure that you have your server and sign-in information r
 
 ![Capture d’écran 2024-08-16 141132](https://github.com/user-attachments/assets/2c0cd321-db60-4608-a323-a20f1896d137)
 ![Capture d’écran 2024-08-16 141442](https://github.com/user-attachments/assets/3721eb50-24b8-4755-ac8c-d0fff124828d)
+
+**---- 2. Create a dedicated SQL pool using the Azure portal ----**: <br>
+We will create a dedicated SQL pool in a Synapse workspace by using the Azure portal. <br>
+1. Navigate to the Synapse workspace where the dedicated SQL pool will be created by typing the service name (or resource name directly) into the search bar. <br>
+2. From the list of workspaces, type the name (or part of the name) of the workspace to open. For this example, we'll use a workspace named **gaussworkspace1**. <br>
+**----- 2.1 Create new dedicated SQL pool -----**: <br>
+1. In the Synapse workspace where you want to create the dedicated SQL pool, select **New dedicated SQL pool** command in the top bar. <br>
+
+![Capture d’écran 2024-08-16 145909](https://github.com/user-attachments/assets/9257d0fb-bfdf-4ef3-abce-4865e38f614b)
+
+2. Enter the following details in the Basics tab: <br>
+
+![Capture d’écran 2024-08-16 150250](https://github.com/user-attachments/assets/7d1c446d-bb46-46d9-9c61-2bad09b8bc36)
+
+**Important**: <br>
+Note that there are specific limitations for the names that dedicated SQL pools can use. Names can't contain special characters, must be 60 or less characters, not contain reserved words, and be unique in the workspace.<br>
+
+3. Select Next: Additional settings. <br>
+4. Select None to provision the dedicated SQL pool without data. <br>
+5. Leave the default collation selected. <br>
+If you want to restore your dedicated SQL pool from a restore point, select Restore point. <br>
+
+![Capture d’écran 2024-08-16 150509](https://github.com/user-attachments/assets/82463e19-d60b-4889-80a8-ac5750c4ae25)
+![Capture d’écran 2024-08-16 153942](https://github.com/user-attachments/assets/69b8e47a-ee84-4be8-bbd7-04fa935ab06c)
+![Capture d’écran 2024-08-16 153942](https://github.com/user-attachments/assets/1cc696cd-0cc6-4a02-bed3-b51ba7482d49)
+![Capture d’écran 2024-08-16 154104](https://github.com/user-attachments/assets/b15e95fe-994f-471d-8aa1-38e20750bbf1)
+![Capture d’écran 2024-08-16 154210](https://github.com/user-attachments/assets/b3a68752-d42a-4968-9da3-f08f46f053b7)
+
+
 
 
 
