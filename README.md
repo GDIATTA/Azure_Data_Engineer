@@ -162,6 +162,26 @@ Select **Ok**
 ![Capture d’écran 2024-08-16 030242](https://github.com/user-attachments/assets/1735c281-38fc-4dd7-b5d0-f2c6b459e983)
 ![Capture d’écran 2024-08-16 030533](https://github.com/user-attachments/assets/c3235c52-5171-4f7c-92b2-1673a76b5498)
 
+**-------------------------- 2. Query the database ------------------------:**
+
+1. In the portal, search for and select SQL databases, and then select your database from the list.<br>
+2. On the page for your database, select Query editor (preview) in the left menu.<br>
+
+![Capture d’écran 2024-08-16 030759](https://github.com/user-attachments/assets/b0fc1954-f638-4e75-96c5-ef7af5f02174)
+
+3. Enter your SQL authentication server admin login information or use Microsoft Entra authentication.<br>
+
+![Capture d’écran 2024-08-16 031058](https://github.com/user-attachments/assets/8e936dab-6d58-4c02-96b2-b43ca2f79803)
+
+4. Enter the following query in the Query editor pane.<br>
+
+![Capture d’écran 2024-08-16 031214](https://github.com/user-attachments/assets/3f7c77a7-6411-4024-89fd-6b0284fce430)
+
+5. Select Run, and then review the query results in the Results pane.<br>
+
+![Capture d’écran 2024-08-16 031450](https://github.com/user-attachments/assets/3860d77f-a1d3-4357-990e-e085acb736db)
+
+
 
 
 
