@@ -255,46 +255,96 @@ After your Synapse workspace is created, you have two ways to open Synapse Studi
 + Open your Synapse workspace in the Azure portal. Select Open on the Open Synapse Studio card under Getting started. <br>
 + Open Azure Synapse Analytics and sign in to your Workspace. <br>
 
+![Capture d’écran 2024-08-16 040702](https://github.com/user-attachments/assets/84972eb9-13da-40c7-9851-9db3620540eb)
+
 **---- 3.1 Create linked services ----** <br>
 In Azure Synapse Analytics, a linked service is where you define your connection information to other services. In this section, you'll create following two kinds of linked services: **Azure SQL Database and Azure Data Lake Storage Gen2 (AzureDataLakeStorage1)** linked services. <br>
 1. On the Synapse Studio home page, select the **Manage tab** in the left navigation. <br>
 2. Under External connections, select **Linked services**. <br>
 3. To add a linked service, select **New**. <br>
+
+![Capture d’écran 2024-08-16 041017](https://github.com/user-attachments/assets/3d115117-0631-4844-8572-383f7b4ead8e)
+
 4. Select **Azure SQL Database** from the gallery, and then select **Continue**. You can type "sql" in the search box to filter the connectors. <br>
+
+![Capture d’écran 2024-08-16 041223](https://github.com/user-attachments/assets/33bbf256-f517-4fab-8828-09794f0e0548)
+
 5. In the New Linked Service page, select **your server name and DB name** from the dropdown list, and specify the **username and password**. Click **Test connection** to validate the settings, then select **Create**. <br>
+
+![Capture d’écran 2024-08-16 045108](https://github.com/user-attachments/assets/0cde4e41-7cb4-4e98-824a-49dcacceca25)
+
 6. Repeat steps 3-4, but select **Azure Data Lake Storage Gen2** instead from the gallery. In the New Linked Service page, select your **storage account name** from the dropdown list. Click **Test connection** to validate the settings, then select **Create**. <br>
 
+![Capture d’écran 2024-08-16 050122](https://github.com/user-attachments/assets/966b98ba-8646-4b1e-9503-b238ce552659)
+![Capture d’écran 2024-08-16 050316](https://github.com/user-attachments/assets/dd66205a-3605-413c-aa05-b32ae39d29cb)
 **---- 3.2 Create a pipeline -----:** <br>
 A pipeline contains the logical flow for an execution of a set of activities. In this section, you'll create a pipeline containing a copy activity that ingests data from Azure SQL Database into a dedicated SQL pool. <br>
-1. Go to the Integrate tab. Select on the plus icon next to the pipelines header and select Pipeline. <br>
-2. Under Move and Transform in the Activities pane, drag Copy data onto the pipeline canvas. <br>
-3. Select on the copy activity and go to the Source tab. Select New to create a new source dataset. <br>
-4. Select Azure SQL Database as your data store and select Continue. <br>
-5. In the Set properties pane, select the Azure SQL Database linked service you created in earlier step. <br>
-6. Under Table name, select a sample table to use in following copy activity. In this tutorial, we use "SalesLT.Customer" table as an example. <br>
-7. Select OK when finished. <br>
-8. Select the copy activity and go to the Sink tab. Select New to create a new sink dataset. <br>
-9. Select Azure Synapse dedicated SQL pool as your data store and select Continue. <br>
-10. In the Set properties pane, select the SQL Analytics pool you created in earlier step. If you're writing to an existing table, under Table name select it from the dropdown. Otherwise, check "Edit" and enter in your new table name. Select OK when finished. <br>
-11. For Sink dataset settings, enable Auto create table in the Table option field. <br>
-12. In the Settings page, select the checkbox for Enable staging. This option applies if your source data is not compatible with PolyBase. <br> In Staging settings section, select the Azure Data Lake Storage Gen2 linked service you created in earlier step as the staging storage.<br>
-The storage is used for staging the data before it loads into Azure Synapse Analytics by using PolyBase. After the copy is complete, the interim data in Azure Data Lake Storage Gen2 is automatically cleaned up. <br>
-13. To validate the pipeline, select Validate on the toolbar. You see the result of the Pipeline validation output on the right side of the page.<br>
+1. Go to the **Integrate tab**. Select on the plus icon next to the pipelines header and select Pipeline. <br>
 
-**----- 3.2.1 Debug and publish the pipeline ----- :**
+![Capture d’écran 2024-08-16 050446](https://github.com/user-attachments/assets/c69903c9-2a5c-48d0-a080-40ffaa8c0375)
+
+2. Under **Move and Transform** in the Activities pane, drag Copy data onto the pipeline canvas. <br>
+
+![Capture d’écran 2024-08-16 050635](https://github.com/user-attachments/assets/807aac52-0879-44aa-8d23-f008f5e1e81a)
+
+3. Select on the copy activity and go to the Source tab. Select **New** to create a new source dataset. <br>
+
+![Capture d’écran 2024-08-16 051125](https://github.com/user-attachments/assets/23e91f0b-c0d6-45b6-9090-2dea2e49d013)
+
+4. Select **Azure SQL Database** as your data store and select **Continue**. <br>
+
+![Capture d’écran 2024-08-16 051248](https://github.com/user-attachments/assets/3a8a44ac-6f42-43c0-905d-79805eac03ff)
+
+5. In the Set properties pane, select the Azure SQL Database linked service you created in earlier step. <br>
+6. Under Table name, select a sample table to use in following copy activity. In this tutorial, we use **SalesLT.Customer** table as an example. <br>
+7. Select OK when finished. <br>
+
+![Capture d’écran 2024-08-16 051618](https://github.com/user-attachments/assets/70c8fbe7-9bc3-4d91-9245-2ba80cce3edb)
+![Capture d’écran 2024-08-16 052251](https://github.com/user-attachments/assets/ef6d706a-36dd-4d80-9844-bf5773265f8e)
+
+8. Select the copy activity and go to the **Sink tab**. Select **New** to create a new sink dataset. <br>
+9. Select **Azure Synapse dedicated SQL pool** as your data store and select **Continue**. <br>
+
+![Capture d’écran 2024-08-16 052622](https://github.com/user-attachments/assets/172fe2f5-f6ba-4d3e-bfd9-cb4eb92b3212)
+
+11. In the Set properties pane, select the **SQL Analytics pool** you created in earlier step. If you're writing to an existing table, under Table name select it from the dropdown. Otherwise, check **Edit** and enter in your **new table name**. Select **OK** when finished. <br>
+
+![Capture d’écran 2024-08-16 155329](https://github.com/user-attachments/assets/68c356ba-b165-4624-a3b6-325242ce32fe)
+
+12. For Sink dataset settings, enable **Auto create table** in the Table option field. <br>
+13. In the Settings page, select the checkbox for **Enable staging**. This option applies if your source data is not compatible with **PolyBase**. <br> In **Staging settings** section, select the **Azure Data Lake Storage Gen2** linked service you created in earlier step as the **staging storage**.<br>
+The storage is used for staging the data before it loads into Azure Synapse Analytics by using PolyBase. After the copy is complete, the **interim data in Azure Data Lake Storage Gen2** is automatically cleaned up. <br>
+14. To validate the pipeline, select Validate on the toolbar. You see the result of the Pipeline validation output on the right side of the page.<br>
+
+![Capture d’écran 2024-08-16 161354](https://github.com/user-attachments/assets/901c387e-ee10-41b1-accc-73f2d600d92c)
+
+**----- 3.2.1 Debug and publish the pipeline ----- :**  <br>
 Once you've finished configuring your pipeline, you can execute a debug run before you publish your artifacts to verify everything is correct. <br>
-1. To debug the pipeline, select Debug on the toolbar. You see the status of the pipeline run in the Output tab at the bottom of the window. <br>
-2. Once the pipeline run succeeds, in the top toolbar, select Publish all. This action publishes entities (datasets, and pipelines) you created to the Synapse Analytics service. <br>
-3. Wait until you see the Successfully published message. To see notification messages, select the bell button on the top-right. <br>
+1. To debug the pipeline, select **Debug** on the toolbar. You see the status of the pipeline run in the Output tab at the bottom of the window. <br>
+2. Once the pipeline run succeeds, in the top toolbar, select **Publish all**. This action publishes entities (datasets, and pipelines) you created to the Synapse Analytics service. <br>
+3. Wait until you see the **Successfully** published message. To see notification messages, select the bell button on the top-right. <br>
+
+![Capture d’écran 2024-08-16 162129](https://github.com/user-attachments/assets/8968c7d2-a16b-45bb-b413-88a5b5f13a3f)
+![Capture d’écran 2024-08-16 162226](https://github.com/user-attachments/assets/3f126706-cb7b-4d39-88fc-7ddffff887de)
+![Capture d’écran 2024-08-16 162317](https://github.com/user-attachments/assets/37446141-3ae6-4678-924e-3ccb7272b2f0)
+
 
 **----- 3.2.2 Trigger and monitor the pipeline -----:** <br>
 In this section, you manually trigger the pipeline published in the previous step. <br>
-1. Select Add Trigger on the toolbar, and then select Trigger Now. On the Pipeline Run page, select OK. <br>
-2. Go to the Monitor tab located in the left sidebar. You see a pipeline run that is triggered by a manual trigger. <br>
-3. When the pipeline run completes successfully, select the link under the Pipeline name column to view activity run details or to rerun the pipeline. In this example, there's only one activity, so you see only one entry in the list. <br>
+1. Select **Add Trigger** on the toolbar, and then select **Trigger Now**. On the Pipeline Run page, select OK. <br>
+
+![Capture d’écran 2024-08-16 162725](https://github.com/user-attachments/assets/29f01aa2-d59a-458f-b2c4-01559dd2c7e9)
+
+2. Go to the **Monitor tab** located in the left sidebar. You see a pipeline run that is triggered by a manual trigger. <br>
+3. When the pipeline run completes successfully, select the link under the **Pipeline name** column to view activity run details or to rerun the pipeline. In this example, there's only one activity, so you see only one entry in the list. <br>
+
+![Capture d’écran 2024-08-16 162930](https://github.com/user-attachments/assets/36453ad4-262b-4987-a04d-5c4529587396)
+
 4. For details about the copy operation, select the Details link (eyeglasses icon) under the Activity name column. You can monitor details like the volume of data copied from the source to the sink, data throughput, execution steps with corresponding duration, and used configurations. <br>
 5. To switch back to the pipeline runs view, select the All pipeline runs link at the top. Select Refresh to refresh the list. <br>
 6. Verify your data is correctly written in the dedicated SQL pool. <br>
+
+![Capture d’écran 2024-08-16 163439](https://github.com/user-attachments/assets/04a2c19f-7753-4636-85d0-36efab2355c6)
 
 
 
