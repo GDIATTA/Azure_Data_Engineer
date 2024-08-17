@@ -358,6 +358,9 @@ A pipeline contains the logical flow for an execution of a set of activities. In
 **---- 4.1 Build transformation logic in the data flow canvas ----:** <br>
 Once you create your Data Flow, you'll be automatically sent to the data flow canvas. In this step, you'll build a data flow that takes the MoviesDB.csv in ADLS storage and aggregates the average rating of comedies from 1910 to 2000. You'll then write this file back to the ADLS storage. <br>
 1. Above the data flow canvas, slide the Data flow **debug slider on**. Debug mode allows for interactive testing of transformation logic against a live Spark cluster. Data Flow clusters take 5-7 minutes to warm up and users are recommended to turn on debug first if they plan to do Data Flow development. <br>
+
+![Capture d’écran 2024-08-17 002634](https://github.com/user-attachments/assets/36edf8f0-925e-431b-bef8-6283ab83f9e1)
+
 2. In the data flow canvas, add a source by clicking on the **Add Source box**. <br>
 
 ![Capture d’écran 2024-08-16 172004](https://github.com/user-attachments/assets/6abae239-e577-48f0-b5cb-4c8a62957806)
