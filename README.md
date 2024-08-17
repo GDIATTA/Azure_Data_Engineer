@@ -487,10 +487,52 @@ After you have successfully built and deployed your data integration pipeline, p
 **----- 4. Get started with Azure Data Factory -----:** <br>
 In tutorial, we will use the Copy activity in a data factory to copy an Azure blob named moviesDB2.csv from an input folder on an Azure Blob Storage to an output folder. <br>
 
-1. Go to all services and select Data Factory. <br>
-2. Select create a data factory . <br>
-3. Fill the following fields just like this: <br>
+1. Go to all services and select **Data Factory**. <br>
+
+![Capture d’écran 2024-08-17 230623](https://github.com/user-attachments/assets/049d563c-178f-42d5-8206-5bcd44785634)
+
+2. Select **create a data factory** . <br>
+
+![Capture d’écran 2024-08-17 230652](https://github.com/user-attachments/assets/2a510d57-a911-4a2d-b58f-776191f4a2f9)
+
+3. Fill the following fields just like this, then select **View and Create** and **Create** <br>
+
+![Capture d’écran 2024-08-17 230848](https://github.com/user-attachments/assets/720539e4-bb80-42fe-8aa3-ab44bf23b5c7)
+![Capture d’écran 2024-08-17 230942](https://github.com/user-attachments/assets/36b3a1a0-856c-4690-9b74-c33e85fd4fc3)
+
 4. Select the data factory in the resource group to view it. Then select the Launch Studio button to continue. <br>
+
+![Capture d’écran 2024-08-17 231027](https://github.com/user-attachments/assets/ad6bb271-5611-4bd4-b982-9bd5aacadfb4)
+![Capture d’écran 2024-08-17 231121](https://github.com/user-attachments/assets/a886913a-2ea6-4cc1-968a-39c3d708e05f)
+
+5. Once opening the fabric resources, you click on the **pipeline to create a pipeline. <br>
+
+![Capture d’écran 2024-08-17 232504](https://github.com/user-attachments/assets/f88f08d6-ebef-430f-8176-eae4be5b8d93)
+
+6. Select **Copy data** in **Move and Transform** in the Activities pane. <br>
+7. The remaining process is the same to what was outlined in **Chapter Pipeline and Data Flow**, specifically in **Section 4: Create a pipeline with a Data Flow activity**. I'll provide a visual guide with images to walk you through the steps. <br>
+
+![Capture d’écran 2024-08-17 232641](https://github.com/user-attachments/assets/5cf353c4-dfc3-465b-a6eb-ff00f4500d3f)
+![Capture d’écran 2024-08-17 232719](https://github.com/user-attachments/assets/d6427e26-49e1-49ea-8ecc-f3d3fc4e7fc6)
+![Capture d’écran 2024-08-17 234537](https://github.com/user-attachments/assets/5bb966cb-b5dc-462c-bcc6-33fdf4b5e847)
+![Capture d’écran 2024-08-17 234604](https://github.com/user-attachments/assets/e07621f5-a264-489f-a2d5-8fbab4891f94)
+![Capture d’écran 2024-08-17 234651](https://github.com/user-attachments/assets/23a92658-02d5-4efa-af5a-bad189dbd8e7)
+![Capture d’écran 2024-08-17 234743](https://github.com/user-attachments/assets/8f229b86-8fc7-4c22-8a1f-c4f1cb8bfdb8)
+![Capture d’écran 2024-08-17 234827](https://github.com/user-attachments/assets/505f0d8b-45cd-4e7d-a4d6-f8126c825cf3)
+![Capture d’écran 2024-08-17 234954](https://github.com/user-attachments/assets/73408b66-db74-41fb-ba69-1223344514cc)
+![Capture d’écran 2024-08-17 235022](https://github.com/user-attachments/assets/dced37d6-c69b-4ad3-9fd2-ae6b447af45c)
+![Capture d’écran 2024-08-17 235104](https://github.com/user-attachments/assets/398aac35-e5de-45d7-bf7e-eef3a61196b9)
+![Capture d’écran 2024-08-17 235211](https://github.com/user-attachments/assets/1adc2df8-5857-4e4a-be36-86caabd882bd)
+![Capture d’écran 2024-08-17 235254](https://github.com/user-attachments/assets/0a7a4bfc-e689-4f57-bc70-622be0f7641d)
+![Capture d’écran 2024-08-17 235409](https://github.com/user-attachments/assets/684565d8-b5f5-4674-b355-22ac9c49c563)
+![Capture d’écran 2024-08-18 000016](https://github.com/user-attachments/assets/f740d3da-736b-4380-84b0-6a8e9d7a2e67)
+![Capture d’écran 2024-08-18 000108](https://github.com/user-attachments/assets/08ecef35-77ca-4d97-9852-42810b57789c)
+![Capture d’écran 2024-08-18 000317](https://github.com/user-attachments/assets/6a2c18c1-b8f2-482b-a460-d1a4f6597cb6)
+![Capture d’écran 2024-08-18 000453](https://github.com/user-attachments/assets/a1809a54-5638-498d-8236-30cefd275edf)
+![Capture d’écran 2024-08-18 000523](https://github.com/user-attachments/assets/b40f25a0-41c0-4011-b464-98312f30b86a)
+
+
+
 
 
 
