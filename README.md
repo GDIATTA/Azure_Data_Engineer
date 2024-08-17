@@ -458,6 +458,40 @@ You can debug a pipeline before you publish it. In this step, you're going to tr
 ![Capture d’écran 2024-08-17 010810](https://github.com/user-attachments/assets/fac82aca-859f-4729-a476-1d10568733a6)
 
 
+#### Chapter3 : ----------- Azure Data Factory ------------:
+
+**----- 1. What is Azure Data Factory? ------:** <br>
+In the world of big data, raw, unorganized data is often stored in relational, non-relational, and other storage systems. However, on its own, raw data doesn't have the proper context or meaning to provide meaningful insights to analysts, data scientists, or business decision makers.<br>
+
+Big data requires a service that can orchestrate and operationalize processes to refine these enormous stores of raw data into actionable business insights. Azure Data Factory is a managed cloud service that's built for these complex hybrid extract-transform-load (ETL), extract-load-transform (ELT), and data integration projects.<br>
+
+**---- 2. Features of Azure Data Factory -----:** <br>
+> **Data Compression**: During the Data Copy activity, it is possible to compress the data and write the compressed data to the target data source. <br>
+> **Extensive Connectivity Support for Different Data Sources**: Azure Data Factory provides broad connectivity support for connecting to different data sources. This is useful when you want to pull or write data from different data sources. <br>
+> **Custom Event Triggers**: Azure Data Factory allows you to automate data processing using custom event triggers. This feature allows you to automatically execute a certain action when a certain event occurs. <br>
+> **Data Preview and Validation**: During the Data Copy activity, tools are provided for previewing and validating data. This feature helps you ensure that data is copied correctly and written to the target data source correctly. <br>
+> **Customizable Data Flows**: Azure Data Factory allows you to create customizable data flows. This feature allows you to add custom actions or steps for data processing. <br>
+> **Integrated Security**: Azure Data Factory offers integrated security features such as Entra ID integration and role-based access control to control access to dataflows. This feature increases security in data processing and protects your data. <br>
+
+**----- How does it work? ----:** <br>
+Data Factory contains a series of interconnected systems that provide a complete end-to-end platform for data engineers.<br>
+> **Connect and collect** : <br>
+Enterprises have data of various types that are located in disparate sources on-premises, in the cloud, structured, unstructured, and semi-structured, all arriving at different intervals and speeds.<br>
+> **Transform and enrich**: <br>
+After data is present in a centralized data store in the cloud, process or transform the collected data by using ADF mapping data flows. Data flows enable data engineers to build and maintain data transformation graphs that execute on Spark without needing to understand Spark clusters or Spark programming. <br>
+> **CI/CD and publish**: <br>
+Data Factory offers full support for CI/CD of your data pipelines using Azure DevOps and GitHub. This allows you to incrementally develop and deliver your ETL processes before publishing the finished product. After the raw data has been refined into a business-ready consumable form, load the data into Azure Data Warehouse, Azure SQL Database, Azure Cosmos DB, or whichever analytics engine your business users can point to from their business intelligence tools. <br>
+> **Monitor**: <br>
+After you have successfully built and deployed your data integration pipeline, providing business value from refined data, monitor the scheduled activities and pipelines for success and failure rates. Azure Data Factory has built-in support for pipeline monitoring via Azure Monitor, API, PowerShell, Azure Monitor logs, and health panels on the Azure portal.<br>
+
+**----- Get started with Azure Data Factory -----:** <br>
+In tutorial, we will use the Copy activity in a data factory to copy an Azure blob named moviesDB2.csv from an input folder on an Azure Blob Storage to an output folder. <br>
+
+1. Go to all services and select Data Factory. <br>
+2. Select create a data factory . <br>
+3. Fill the following fields just like this: <br>
+4. Select the data factory in the resource group to view it. Then select the Launch Studio button to continue. <br>
+
 
 
 
